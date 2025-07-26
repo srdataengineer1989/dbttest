@@ -1,7 +1,0 @@
-version: 2
-sources:
-    - name: rawsource
-      database: "{{('sales')}}"
-      schema: rawdata
-      tables:
-        - name: raw_customerdata
