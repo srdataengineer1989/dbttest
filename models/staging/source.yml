@@ -1,9 +1,17 @@
 version: 2
 sources:
-    - name: rawsource
-      database: "{{('SALES')}}"
-      schema: rawdata
-      tables:
-        - name: raw_customerdata
-        - name: raw_orders
-        - name: raw_customers_snapshot
+  - name: rawsource
+    database: "{{('SALES')}}"
+    schema: rawdata
+    tables:
+      - name: raw_customerdata
+        columns:
+          - name: id
+            tests:
+              - not_null
+          - name: gender
+            tests:
+              - accepted_values:
+                  values: ["male", "female","Male", "FEMale"]
+      - name: raw_orders
+      - name: raw_customers_snapshot
