@@ -6,3 +6,4 @@ sources:
       tables:
         - name: raw_customerdata
         - name: raw_orders
+        - name: raw_customers_snapshot
